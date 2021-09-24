@@ -4,13 +4,12 @@ int main (int argc, char **argv)
 {
 	t_game game;
 
-	if(1)
+	if(argc == 2)
 	{
 		game.map = read_map(argv[1]);
-		if(game.map)
+		if(1)
 		{
-			game.mlx = mlx_init();
-			game.win = mlx_new_window(game.mlx, 500, 500, "42");
+			game_init(&game);
 			mlx_loop(game.mlx);
 		}
 		else

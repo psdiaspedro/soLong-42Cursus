@@ -5,7 +5,11 @@ LIBFT			=	$(LIBFT_PATH)/libft.a
 MINILIBX_PATH	=	./libraries/minilibx
 MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 
-SOURCES_FILES	=	so_long.c
+SOURCES_FILES	=	so_long.c \
+					draw.c \
+					init.c \
+					map.c \
+					window.c 
 
 SOURCES_DIR		=	sources
 
