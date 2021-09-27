@@ -7,7 +7,7 @@ int main (int argc, char **argv)
 	if(argc == 2)
 	{
 		game.map = read_map(argv[1]);
-		if(map_checker(game.map))
+		if(map_checker(&game))
 		{
 			game_init(&game);
 			mlx_loop(game.mlx);

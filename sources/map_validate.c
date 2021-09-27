@@ -43,27 +43,60 @@ int is_wall(char **map)
 	return(1);
 }
 
-int map_checker(char **map)
+int is_pec(t_game *game)
 {
-	if (is_retangular(map) && is_wall(map))
+	int	i;
+	int	j;
+
+	game->n_colect = 0;
+	game->n_player = 0;
+	game->n_exit = 0;
+	i = 0;
+	while(game->map[i] != '\0')
+	{
+		j = 0;
+		while(game->map[i][j] != '\0')
+		{
+			if(game->map[i][j] == 'P')
+				game->n_player++;
+			else if(game->map[i][j] == 'E')
+				game->n_exit++;
+			else if(game->map[i][j] == 'C')
+				game->n_colect++;
+			j++;
+		}
+		i++;
+	}
+	if(game->n_player != 1 || game->n_exit == 0 || game->n_colect == 0)
+		return (0);
+	return(1);
+}
+
+int is_validate(char **map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while(map[i] != '\0')
+	{
+		j = 0;
+		while(map[i][j] != '\0')
+		{
+			if(map[i][j] != 'P' && map[i][j] != 'E' && map[i][j] != 'C'
+				&& map[i][j] != '0' && map[i][j] != '1')
+				return(0);
+			j++;
+		}
+		i++;
+	}
+	return(1);
+}
+
+int map_checker(t_game *game)
+{
+	if (is_retangular(game->map) && is_wall(game->map) && is_pec(game)
+		&& is_validate(game->map))
 		return(1);
 	return(0);
 }
-
-/* MAPA VALIDO
-
-	0, 1, C, E, P
-
-	0 - FREE SPACE
-	1 - WALL
-	C - COLLECTIBLE
-	E - MAP EXIT
-	P - PLAYER START POSITION
-
-
-	obrigações
-
-	- FECHADO POR PARADES (1)
-	- PELO MENOS 1 EXIT, 1 COLLECTIBLE, 1 PLAYER START POSITION
-	- O MAPA DEVE SER RETANGULAR
-*/

@@ -23,8 +23,8 @@ typedef struct s_game
 	int		map_h;
 	int		img_w;
 	int		img_h;
-	int		n_movments;
 	int		n_colect;
+	int		n_player;
 	int		n_exit;
 	// int		x;
 	// int		y;
@@ -52,7 +52,7 @@ void	img_init(t_game *game);
 void	game_init(t_game *game);
 char	**read_map(char *path);
 void	size_window(t_game *game);
-int		map_checker(char **map);
+int		map_checker(t_game *game);
 
 
 #endif
