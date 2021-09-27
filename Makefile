@@ -9,7 +9,8 @@ SOURCES_FILES	=	so_long.c \
 					draw.c \
 					init.c \
 					map.c \
-					window.c 
+					window.c \
+					map_validate.c \
 
 SOURCES_DIR		=	sources
 
