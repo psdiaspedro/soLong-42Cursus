@@ -9,7 +9,7 @@ void player_w(t_game *game)
 		game->map[game->y_player + 1][game->x_player] = '0';
 		game->moves++;
 		map_draw(game);
-		exit(0);
+		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
@@ -35,7 +35,7 @@ void player_s(t_game *game)
 		game->map[game->y_player - 1][game->x_player] = '0';
 		game->moves++;
 		map_draw(game);
-		exit(0);
+		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
@@ -61,7 +61,7 @@ void player_d(t_game *game)
 		game->map[game->y_player][game->x_player - 1] = '0';
 		game->moves++;
 		map_draw(game);
-		exit(0);
+		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
@@ -87,7 +87,7 @@ void player_a(t_game *game)
 		game->map[game->y_player][game->x_player + 1] = '0';
 		game->moves++;
 		map_draw(game);
-		exit(0);
+		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')

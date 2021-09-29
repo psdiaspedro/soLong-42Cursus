@@ -15,8 +15,8 @@ int main (int argc, char **argv)
 		}
 		else
 		{
-			printf("Error\nInvalid Map");
 			free(game.map);
+			printf("Error\nInvalid Map");
 			exit(1);
 		}
 	}else

@@ -27,17 +27,10 @@ void game_events(int keycode, t_game *game)
 int keypress(int keycode, t_game *game)
 {
 	if(keycode == KEY_ESC || keycode == KEY_Q)
-		exit(0);
+		exit_game(game);
 	else
 		game_events(keycode, game);
 		printf("moves: %d\n", game->moves);
-	return(0);
-}
-
-int exit_game(t_game *game)
-{
-	mlx_destroy_window(game->mlx, game->win);
-	exit(0);
 	return(0);
 }
 
@@ -47,3 +40,4 @@ void gameplay(t_game *game)
 	mlx_hook(game->win, 17, 1L<<17, exit_game, game);
 	mlx_hook(game->win, 9, 1L<<21, map_draw, game);
 }
+

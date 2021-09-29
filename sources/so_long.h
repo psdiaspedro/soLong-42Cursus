@@ -58,5 +58,6 @@ void	player_w(t_game *game);
 void	player_d(t_game *game);
 void	player_s(t_game *game);
 void	player_a(t_game *game);
+int		exit_game(t_game *game);
 
 #endif
