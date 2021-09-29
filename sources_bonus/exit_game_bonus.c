@@ -1,4 +1,4 @@
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 void free_map(char **map)
 {
@@ -23,7 +23,6 @@ int exit_game(t_game *game)
 	mlx_destroy_image(game->mlx, game->img_exit);
 	mlx_destroy_window(game->mlx, game->win);
 	mlx_destroy_display(game->mlx);
-	free(game->mlx);
 	exit(0);
 	return(0);
 }

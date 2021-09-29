@@ -12,22 +12,36 @@ SOURCES_FILES	=	so_long.c \
 					map_validate.c \
 					player_update.c \
 					gameplay.c \
-					exit_game.c 
+					exit_game.c
+
+BONUS_FILES	=		so_long_bonus.c \
+					draw_bonus.c \
+					init_bonus.c \
+					read_map_bonus.c \
+					map_validate_bonus.c \
+					player_update_bonus.c \
+					gameplay_bonus.c \
+					exit_game_bonus.c
 
 SOURCES_DIR		=	sources
+BONUS_DIR		=	sources_bonus
 
 HEADER			=	$(SOURCES_DIR)/so_long.h
+HEEADER_BONUS	=	$(BONUS_DIR)/so_long_bonus.h
 
 SOURCES			=	$(addprefix $(SOURCES_DIR)/, $(SOURCES_FILES))
+ONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))
 
 OBJECTS			= 	$(SOURCES:.c=.o)
+OBJECTS_BONUS	= 	$(BONUS_FILES:.c=.o)
 
 NAME			=	so_long
+NAME_BONUS		=	so_long_bonus
 
 CC				=	clang
 RM				=	rm -f
 
-# CFLAGS			=	-Wall -Wextra -Werror -no-pie -g3 -fsanitize=address
+# CFLAGS		=	-Wall -Wextra -Werror -no-pie -g3 -fsanitize=address
 CFLAGS			=	-Wall -Wextra -Werror
 MLXFLAGS		=	-L. -lXext -L. -lX11
 
@@ -35,6 +49,8 @@ MLXFLAGS		=	-L. -lXext -L. -lX11
 				$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 all:			$(NAME)
+
+bonus:			$(NAME_BONUS)
 
 $(NAME):		$(LIBFT) $(MINILIBX) $(OBJECTS) $(HEADER)
 				$(CC) $(CFLAGS) $(OBJECTS) $(LIBFT) $(MINILIBX) $(MLXFLAGS) -o $(NAME)
@@ -48,28 +64,27 @@ $(MINILIBX):
 clean:
 				$(MAKE) -C $(LIBFT_PATH) clean
 				$(MAKE) -C $(MINILIBX_PATH) clean
-				$(RM) $(OBJECTS)
+				$(RM) $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean:			clean
 				$(MAKE) -C $(LIBFT_PATH) fclean
-				$(RM) $(NAME)
+				$(RM) $(NAME) $(NAME_BONUS)
 
 re:				fclean all
 
 run:
-				$(MAKE) && ./so_long "assets/maps/another_2.ber"
+				$(MAKE) && ./so_long ./assets/maps/big.ber
 
 runv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long assets/maps/another_2.ber
+				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long ./assets/maps/big.ber
 
 runiv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long assets/maps/another.berr
+				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long ./assets/maps/another.ber
 
 norm:
 				norminette $(SOURCES_DIR)
 
-
-img:
-				convert *.jpg -set filename:base "%[basename]" "%[filename:base].xpm"
+normb:
+				norminette $(BONUS_DIR)
 
 .PHONY:			all clean fclean re libft minilibx bonus
