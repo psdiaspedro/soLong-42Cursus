@@ -11,6 +11,8 @@ SOURCES_FILES	=	so_long.c \
 					map.c \
 					window.c \
 					map_validate.c \
+					player_update.c \
+					gameplay.c 
 
 SOURCES_DIR		=	sources
 

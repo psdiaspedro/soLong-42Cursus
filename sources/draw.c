@@ -6,6 +6,13 @@ void img_draw(t_game *game, void *image, int x, int y)
 		(game->mlx, game->win, image, x * 32, y * 32);
 }
 
+void player_draw(t_game *game, void *image, int x, int y)
+{
+	game->x_player = x;
+	game->y_player = y;
+	img_draw(game, image, x, y);
+}
+
 void map_draw(t_game *game)
 {
 	int	y;
@@ -22,7 +29,7 @@ void map_draw(t_game *game)
 			else if(game->map[y][x] == '0')
 				img_draw(game, game->img_backg, x, y);
 			else if(game->map[y][x] == 'P')
-				img_draw(game, game->img_player, x, y);
+				player_draw(game, game->img_player, x, y);
 			else if(game->map[y][x] == 'C')
 				img_draw(game, game->img_colect, x, y);
 			else if(game->map[y][x] == 'E')

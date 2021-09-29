@@ -10,6 +10,7 @@ int main (int argc, char **argv)
 		if(map_checker(&game))
 		{
 			game_init(&game);
+			gameplay(&game);
 			mlx_loop(game.mlx);
 		}
 		else

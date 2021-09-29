@@ -19,6 +19,7 @@ void game_init(t_game *game)
 	game->mlx = mlx_init();
 	size_window(game);
 	game->win = mlx_new_window(game->mlx, game->map_w, game->map_h, "42");
+	game->moves = 0;
 	img_init(game);
 	map_draw(game);
 }

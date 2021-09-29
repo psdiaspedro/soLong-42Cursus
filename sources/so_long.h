@@ -26,8 +26,9 @@ typedef struct s_game
 	int		n_colect;
 	int		n_player;
 	int		n_exit;
-	// int		x;
-	// int		y;
+	int		x_player;
+	int		y_player;
+	int		moves;
 }	t_game;
 
 
@@ -53,6 +54,10 @@ void	game_init(t_game *game);
 char	**read_map(char *path);
 void	size_window(t_game *game);
 int		map_checker(t_game *game);
-
+void	gameplay(t_game *game);
+void	player_w(t_game *game);
+void	player_d(t_game *game);
+void	player_s(t_game *game);
+void	player_a(t_game *game);
 
 #endif
