@@ -29,8 +29,10 @@ int keypress(int keycode, t_game *game)
 	if(keycode == KEY_ESC || keycode == KEY_Q)
 		exit_game(game);
 	else
+	{
 		game_events(keycode, game);
 		printf("moves: %d\n", game->moves);
+	}
 	return(0);
 }
 
