@@ -13,7 +13,7 @@ void player_draw(t_game *game, void *image, int x, int y)
 	img_draw(game, image, x, y);
 }
 
-void map_draw(t_game *game)
+int map_draw(t_game *game)
 {
 	int	y;
 	int	x;
@@ -38,4 +38,5 @@ void map_draw(t_game *game)
 		}
 		y++;
 	}
+	return (0);
 }

@@ -34,8 +34,16 @@ int keypress(int keycode, t_game *game)
 	return(0);
 }
 
+int exit_game(t_game *game)
+{
+	mlx_destroy_window(game->mlx, game->win);
+	exit(0);
+	return(0);
+}
+
 void gameplay(t_game *game)
 {
 	mlx_hook(game->win, 2, 1L<<0, keypress, game);
-
+	mlx_hook(game->win, 17, 1L<<17, exit_game, game);
+	mlx_hook(game->win, 9, 1L<<21, map_draw, game);
 }

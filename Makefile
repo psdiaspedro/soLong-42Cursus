@@ -8,11 +8,10 @@ MINILIBX		=	$(MINILIBX_PATH)/libmlx.a
 SOURCES_FILES	=	so_long.c \
 					draw.c \
 					init.c \
-					map.c \
-					window.c \
+					read_map.c \
 					map_validate.c \
 					player_update.c \
-					gameplay.c 
+					gameplay.c
 
 SOURCES_DIR		=	sources
 

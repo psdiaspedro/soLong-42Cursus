@@ -15,13 +15,13 @@ int main (int argc, char **argv)
 		}
 		else
 		{
-			printf("MAPA INVALIDO");
+			printf("Error\nInvalid Map");
 			free(game.map);
 			exit(1);
 		}
 	}else
 	{
-		printf("ERRO SEM MAPA");
+		printf("Error\nInvalid Sytax");
 		exit(1);
 	}
 	return (0);

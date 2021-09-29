@@ -48,11 +48,10 @@ typedef struct s_game
 # define KEY_RIGHT 65363
 
 void	img_draw(t_game *game, void *image, int x, int y);
-void	map_draw(t_game *game);
+int		map_draw(t_game *game);
 void	img_init(t_game *game);
 void	game_init(t_game *game);
 char	**read_map(char *path);
-void	size_window(t_game *game);
 int		map_checker(t_game *game);
 void	gameplay(t_game *game);
 void	player_w(t_game *game);
