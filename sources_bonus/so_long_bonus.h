@@ -19,6 +19,7 @@ typedef struct s_game
 	void	*img_player;
 	void	*img_colect;
 	void	*img_exit;
+	void	*img_enemies;
 	int		map_w;
 	int		map_h;
 	int		img_w;
@@ -59,5 +60,6 @@ void	player_d(t_game *game);
 void	player_s(t_game *game);
 void	player_a(t_game *game);
 int		exit_game(t_game *game);
+int		animate(t_game *game);
 
 #endif

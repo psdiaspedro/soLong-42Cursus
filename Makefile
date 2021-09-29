@@ -14,14 +14,15 @@ SOURCES_FILES	=	so_long.c \
 					gameplay.c \
 					exit_game.c
 
-BONUS_FILES	=		so_long_bonus.c \
+SOURCES_BONUS	=	so_long_bonus.c \
 					draw_bonus.c \
 					init_bonus.c \
 					read_map_bonus.c \
 					map_validate_bonus.c \
 					player_update_bonus.c \
 					gameplay_bonus.c \
-					exit_game_bonus.c
+					exit_game_bonus.c \
+					animation.c
 
 SOURCES_DIR		=	sources
 BONUS_DIR		=	sources_bonus
@@ -30,7 +31,7 @@ HEADER			=	$(SOURCES_DIR)/so_long.h
 HEEADER_BONUS	=	$(BONUS_DIR)/so_long_bonus.h
 
 SOURCES			=	$(addprefix $(SOURCES_DIR)/, $(SOURCES_FILES))
-ONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))
+BONUS_FILES		=	$(addprefix $(BONUS_DIR)/, $(SOURCES_BONUS))
 
 OBJECTS			= 	$(SOURCES:.c=.o)
 OBJECTS_BONUS	= 	$(BONUS_FILES:.c=.o)
@@ -54,6 +55,9 @@ bonus:			$(NAME_BONUS)
 
 $(NAME):		$(LIBFT) $(MINILIBX) $(OBJECTS) $(HEADER)
 				$(CC) $(CFLAGS) $(OBJECTS) $(LIBFT) $(MINILIBX) $(MLXFLAGS) -o $(NAME)
+
+$(NAME_BONUS):		$(LIBFT) $(MINILIBX) $(OBJECTS_BONUS) $(HEADER_BONUS)
+					$(CC) $(CFLAGS) $(OBJECTS_BONUS) $(LIBFT) $(MINILIBX) $(MLXFLAGS) -o $(NAME_BONUS)
 
 $(LIBFT):
 				$(MAKE) -C $(LIBFT_PATH)
