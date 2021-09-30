@@ -14,6 +14,9 @@ void player_w(t_game *game)
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
 		game->y_player += 1; //volta o player
+	else if(game->map[game->y_player][game->x_player] == 'V'
+			|| game->map[game->y_player][game->x_player] == 'H')
+		exit_game(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -40,6 +43,9 @@ void player_s(t_game *game)
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
 		game->y_player -= 1; //volta o player
+	else if(game->map[game->y_player][game->x_player] == 'V'
+			|| game->map[game->y_player][game->x_player] == 'H')
+		exit_game(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -66,6 +72,9 @@ void player_d(t_game *game)
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
 		game->x_player -= 1; //volta o player
+	else if(game->map[game->y_player][game->x_player] == 'V'
+			|| game->map[game->y_player][game->x_player] == 'H')
+		exit_game(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);
@@ -92,6 +101,9 @@ void player_a(t_game *game)
 	else if(game->map[game->y_player][game->x_player] == '1'
 			|| game->map[game->y_player][game->x_player] == 'E')
 		game->x_player += 1; //volta o player
+	else if(game->map[game->y_player][game->x_player] == 'V'
+			|| game->map[game->y_player][game->x_player] == 'H')
+		exit_game(game);
 	else
 	{
 		mlx_clear_window(game->mlx, game->win);

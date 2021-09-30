@@ -34,6 +34,8 @@ int map_draw(t_game *game)
 				img_draw(game, game->img_colect, x, y);
 			else if(game->map[y][x] == 'E')
 				img_draw(game, game->img_exit, x, y);
+			else if(game->map[y][x] == 'H' || game->map[y][x] == 'V')
+				img_draw(game, game->img_enemies, x, y);
 			x++;
 		}
 		y++;

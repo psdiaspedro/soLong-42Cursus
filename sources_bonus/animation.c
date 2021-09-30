@@ -2,7 +2,6 @@
 
 int animate(t_game *game)
 {
-	game->y_player -= 1;
-	player_w(game);
+	game->n_colect = game->n_colect;
 	return (0);
 }
