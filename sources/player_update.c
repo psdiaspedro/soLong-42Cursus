@@ -2,6 +2,8 @@
 
 void player_w(t_game *game)
 {
+	game->img_player = mlx_xpm_file_to_image
+		(game->mlx, "assets/images/env_2/P_W.xpm", &game->img_w, &game->img_h);
 	if(game->map[game->y_player][game->x_player] == 'E'
 			&& game->n_colect == 0)
 	{
@@ -28,6 +30,8 @@ void player_w(t_game *game)
 
 void player_s(t_game *game)
 {
+	game->img_player = mlx_xpm_file_to_image
+		(game->mlx, "assets/images/env_2/P_S.xpm", &game->img_w, &game->img_h);
 	if(game->map[game->y_player][game->x_player] == 'E'
 			&& game->n_colect == 0)
 	{
@@ -54,6 +58,8 @@ void player_s(t_game *game)
 
 void player_d(t_game *game)
 {
+	game->img_player = mlx_xpm_file_to_image
+		(game->mlx, "assets/images/env_2/P_D.xpm", &game->img_w, &game->img_h);
 	if(game->map[game->y_player][game->x_player] == 'E'
 			&& game->n_colect == 0)
 	{
@@ -80,6 +86,8 @@ void player_d(t_game *game)
 
 void player_a(t_game *game)
 {
+	game->img_player = mlx_xpm_file_to_image
+		(game->mlx, "assets/images/env_2/P_A.xpm", &game->img_w, &game->img_h);
 	if(game->map[game->y_player][game->x_player] == 'E'
 			&& game->n_colect == 0)
 	{
