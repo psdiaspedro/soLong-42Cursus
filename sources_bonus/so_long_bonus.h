@@ -64,5 +64,6 @@ void	player_a(t_game *game);
 int		exit_game(t_game *game);
 void	display_moves(t_game *game);
 int		animation(t_game *game);
+void	free_map(char **map);
 
 #endif
