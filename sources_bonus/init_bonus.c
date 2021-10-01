@@ -22,7 +22,7 @@ void size_window_init(t_game *game)
 	i = 0;
 	while(game->map[i] != '\0')
 		i++;
-	game->map_h = i * 32;
+	game->map_h = i * 32 + 32;
 }
 
 void game_init(t_game *game)

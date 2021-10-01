@@ -3,7 +3,17 @@
 void img_draw(t_game *game, void *image, int x, int y)
 {
 	mlx_put_image_to_window
-		(game->mlx, game->win, image, x * 32, y * 32);
+		(game->mlx, game->win, image, x * 32, y * 32 + 32);
+}
+
+void display_moves(t_game *game)
+{
+	char *str;
+
+	str = ft_itoa(game->moves);
+	mlx_string_put(game->mlx, game->win, 25, 20, 0xFFFFFF, "MOVES: ");
+	mlx_string_put(game->mlx, game->win, 70, 20, 0xFFFFFF, str);
+	free(str);
 }
 
 void player_draw(t_game *game, void *image, int x, int y)
@@ -38,5 +48,6 @@ int map_draw(t_game *game)
 		}
 		y++;
 	}
+	display_moves(game);
 	return (0);
 }
