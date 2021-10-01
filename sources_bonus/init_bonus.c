@@ -12,6 +12,8 @@ void img_init(t_game *game)
 		(game->mlx, "assets/images/env_2/C.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image
 		(game->mlx, "assets/images/env_2/EC.xpm", &game->img_w, &game->img_h);
+	game->img_enemie = mlx_xpm_file_to_image
+		(game->mlx, "assets/images/enemies/E1.xpm", &game->img_w, &game->img_h);
 }
 
 void size_window_init(t_game *game)
@@ -31,6 +33,8 @@ void game_init(t_game *game)
 	size_window_init(game);
 	game->win = mlx_new_window(game->mlx, game->map_w, game->map_h, "42");
 	game->moves = 0;
+	game->pos_enemies = 1;
+	game->loop = 0;
 	img_init(game);
 	map_draw(game);
 }

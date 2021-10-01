@@ -19,6 +19,7 @@ typedef struct s_game
 	void	*img_player;
 	void	*img_colect;
 	void	*img_exit;
+	void	*img_enemie;
 	int		map_w;
 	int		map_h;
 	int		img_w;
@@ -29,6 +30,8 @@ typedef struct s_game
 	int		x_player;
 	int		y_player;
 	int		moves;
+	int		pos_enemies;
+	int		loop;
 }	t_game;
 
 
@@ -59,6 +62,7 @@ void	player_d(t_game *game);
 void	player_s(t_game *game);
 void	player_a(t_game *game);
 int		exit_game(t_game *game);
-void 	display_moves(t_game *game);
+void	display_moves(t_game *game);
+int		animation(t_game *game);
 
 #endif

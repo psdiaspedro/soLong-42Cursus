@@ -21,6 +21,7 @@ int exit_game(t_game *game)
 	mlx_destroy_image(game->mlx, game->img_player);
 	mlx_destroy_image(game->mlx, game->img_colect);
 	mlx_destroy_image(game->mlx, game->img_exit);
+	mlx_destroy_image(game->mlx, game->img_enemie);
 	mlx_destroy_window(game->mlx, game->win);
 	mlx_destroy_display(game->mlx);
 	free(game->mlx);

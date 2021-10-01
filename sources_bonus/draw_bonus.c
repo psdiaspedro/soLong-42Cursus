@@ -30,11 +30,11 @@ int map_draw(t_game *game)
 	int	y;
 	int	x;
 
-	y = 0;
-	while(game->map[y])
+	y = -1;
+	while(game->map[++y])
 	{
-		x = 0;
-		while(game->map[y][x])
+		x = -1;
+		while(game->map[y][++x])
 		{
 			if(game->map[y][x] == '1')
 				img_draw(game, game->img_wall, x, y);
@@ -46,9 +46,9 @@ int map_draw(t_game *game)
 				img_draw(game, game->img_colect, x, y);
 			else if(game->map[y][x] == 'E')
 				exit_draw(game, x, y);
-			x++;
+			else if(game->map[y][x] == 'K')
+				img_draw(game, game->img_enemie, x, y);
 		}
-		y++;
 	}
 	display_moves(game);
 	return (0);

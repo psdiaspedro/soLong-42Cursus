@@ -28,13 +28,12 @@ void player_update_image(char key, t_game *game)
 void player_w(t_game *game)
 {
 	player_update_image('w', game);
-	if(game->map[game->y_player][game->x_player] == 'E'
-			&& game->n_colect == 0)
+	if((game->map[game->y_player][game->x_player] == 'E' && game->n_colect == 0)
+		|| game->map[game->y_player][game->x_player] == 'K')
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player + 1][game->x_player] = '0';
 		game->moves++;
-		map_draw(game);
 		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
@@ -55,13 +54,12 @@ void player_w(t_game *game)
 void player_s(t_game *game)
 {
 	player_update_image('s', game);
-	if(game->map[game->y_player][game->x_player] == 'E'
-			&& game->n_colect == 0)
+	if((game->map[game->y_player][game->x_player] == 'E' && game->n_colect == 0)
+		|| game->map[game->y_player][game->x_player] == 'K')
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player - 1][game->x_player] = '0';
 		game->moves++;
-		map_draw(game);
 		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
@@ -82,13 +80,12 @@ void player_s(t_game *game)
 void player_d(t_game *game)
 {
 	player_update_image('d', game);
-	if(game->map[game->y_player][game->x_player] == 'E'
-			&& game->n_colect == 0)
+	if((game->map[game->y_player][game->x_player] == 'E' && game->n_colect == 0)
+		|| game->map[game->y_player][game->x_player] == 'K')
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player - 1] = '0';
 		game->moves++;
-		map_draw(game);
 		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
@@ -109,13 +106,12 @@ void player_d(t_game *game)
 void player_a(t_game *game)
 {
 	player_update_image('a', game);
-	if(game->map[game->y_player][game->x_player] == 'E'
-			&& game->n_colect == 0)
+	if((game->map[game->y_player][game->x_player] == 'E' && game->n_colect == 0)
+		|| game->map[game->y_player][game->x_player] == 'K')
 	{
 		mlx_clear_window(game->mlx, game->win);
 		game->map[game->y_player][game->x_player + 1] = '0';
 		game->moves++;
-		map_draw(game);
 		exit_game(game);
 	}
 	else if(game->map[game->y_player][game->x_player] == '1'
