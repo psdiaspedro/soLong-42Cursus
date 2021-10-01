@@ -11,7 +11,7 @@ void img_init(t_game *game)
 	game->img_colect = mlx_xpm_file_to_image
 		(game->mlx, "assets/images/env_2/C.xpm", &game->img_w, &game->img_h);
 	game->img_exit = mlx_xpm_file_to_image
-		(game->mlx, "assets/images/env_2/E.xpm", &game->img_w, &game->img_h);
+		(game->mlx, "assets/images/env_2/EC.xpm", &game->img_w, &game->img_h);
 }
 
 void size_window_init(t_game *game)
