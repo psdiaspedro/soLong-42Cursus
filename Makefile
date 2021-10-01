@@ -80,10 +80,10 @@ run:
 				$(MAKE) && ./so_long ./assets/maps/big.ber
 
 runv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long ./assets/maps/big.ber
+				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all --track-origins=yes ./so_long ./assets/maps/big.ber
 
 runiv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all -s --track-origins=yes ./so_long ./assets/maps/another.ber
+				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all --track-origins=yes ./so_long ./assets/maps/another.ber
 
 norm:
 				norminette $(SOURCES_DIR)
