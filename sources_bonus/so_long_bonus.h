@@ -1,12 +1,9 @@
 #ifndef SO_LONG_BONUS_H
 # define SO_LONG_BONUS_H
 
-//# include "../libraries/minilibx/mlx_int.h"
 # include "../libraries/minilibx/mlx.h"
 # include "../libraries/libft/libft.h"
 # include <stdio.h>
-// # include <unistd.h>
-// # include <stdlib.h>
 # include <fcntl.h>
 
 typedef struct s_game
@@ -33,9 +30,6 @@ typedef struct s_game
 	int		pos_enemies;
 	int		loop;
 }	t_game;
-
-
-# define IMG_PLAYER "textures/wizard.xpm"
 
 # define KEY_ESC 65307
 # define KEY_Q 113

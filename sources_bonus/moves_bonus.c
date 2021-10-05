@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   moves_bonus.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pedroadias <pedroadias@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/04 23:40:10 by pedroadias        #+#    #+#             */
+/*   Updated: 2021/10/04 23:40:13 by pedroadias       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long_bonus.h"
 
-void display_moves(t_game *game)
+void	display_moves(t_game *game)
 {
 	char *str;
 

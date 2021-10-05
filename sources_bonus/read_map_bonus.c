@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_map_bonus.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pedroadias <pedroadias@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/04 23:41:42 by pedroadias        #+#    #+#             */
+/*   Updated: 2021/10/04 23:49:57 by pedroadias       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long_bonus.h"
 
 char	**read_map(char *path)
@@ -9,15 +21,15 @@ char	**read_map(char *path)
 	char	**map;
 
 	fd = open(path, O_RDONLY);
-	if(fd == -1)
+	if (fd == -1)
 		return (NULL);
-	holder_map = ft_strdup(""); //vaireceber o join, precisa iniciar
-	while(1)
+	holder_map = ft_strdup("");
+	while (1)
 	{
 		line = ft_get_next_line(fd);
-		if(!line)
+		if (!line)
 			break ;
-		holder = holder_map; //holder para nao dar problema no join
+		holder = holder_map;
 		holder_map = ft_strjoin(holder, line);
 		free(line);
 		free(holder);
