@@ -23,7 +23,7 @@ SOURCES_BONUS	=	so_long_bonus.c \
 					gameplay_bonus.c \
 					exit_game_bonus.c \
 					moves_bonus.c \
-					animation.c
+					animation_bonus.c
 
 
 SOURCES_DIR		=	sources
@@ -44,7 +44,6 @@ NAME_BONUS		=	so_long_bonus
 CC				=	clang
 RM				=	rm -f
 
-# CFLAGS		=	-Wall -Wextra -Werror -no-pie -g3 -fsanitize=address
 CFLAGS			=	-Wall -Wextra -Werror
 MLXFLAGS		=	-L. -lXext -L. -lX11
 
@@ -77,20 +76,5 @@ fclean:			clean
 				$(RM) $(NAME) $(NAME_BONUS)
 
 re:				fclean all
-
-run:
-				$(MAKE) && ./so_long ./assets/maps/big.ber
-
-runv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all --track-origins=yes ./so_long ./assets/maps/big.ber
-
-runiv:
-				$(MAKE) && valgrind -q --leak-check=full --show-leak-kinds=all --track-origins=yes ./so_long ./assets/maps/another.ber
-
-norm:
-				norminette $(SOURCES_DIR)
-
-normb:
-				norminette $(BONUS_DIR)
 
 .PHONY:			all clean fclean re libft minilibx bonus
