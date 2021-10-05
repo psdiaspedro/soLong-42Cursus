@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_update_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igvaz-fe <igvaz-fe@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: paugusto <paugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 18:52:08 by igvaz-fe          #+#    #+#             */
-/*   Updated: 2021/10/01 20:09:05 by igvaz-fe         ###   ########.fr       */
+/*   Created: 2021/10/05 08:59:19 by paugusto          #+#    #+#             */
+/*   Updated: 2021/10/05 08:59:20 by paugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

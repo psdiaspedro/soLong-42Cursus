@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animation.c                                        :+:      :+:    :+:   */
+/*   animation_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igvaz-fe <igvaz-fe@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: paugusto <paugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 18:51:37 by igvaz-fe          #+#    #+#             */
-/*   Updated: 2021/10/01 19:16:20 by igvaz-fe         ###   ########.fr       */
+/*   Created: 2021/10/05 08:58:52 by paugusto          #+#    #+#             */
+/*   Updated: 2021/10/05 08:58:53 by paugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	animation(t_game *game)
 {
-	if (game->loop < 1000)
+	if (game->loop < 2000)
 	{
 		game->loop++;
 		return (0);

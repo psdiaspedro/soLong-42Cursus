@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gameplay_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igvaz-fe <igvaz-fe@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: paugusto <paugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 18:51:51 by igvaz-fe          #+#    #+#             */
-/*   Updated: 2021/10/01 19:35:33 by igvaz-fe         ###   ########.fr       */
+/*   Created: 2021/10/05 08:59:05 by paugusto          #+#    #+#             */
+/*   Updated: 2021/10/05 08:59:06 by paugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

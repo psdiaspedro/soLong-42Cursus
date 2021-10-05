@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_validate_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igvaz-fe <igvaz-fe@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: paugusto <paugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 18:51:58 by igvaz-fe          #+#    #+#             */
-/*   Updated: 2021/10/01 18:52:00 by igvaz-fe         ###   ########.fr       */
+/*   Created: 2021/10/05 08:59:11 by paugusto          #+#    #+#             */
+/*   Updated: 2021/10/05 08:59:12 by paugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
