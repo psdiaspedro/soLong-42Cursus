@@ -6,7 +6,7 @@
 /*   By: paugusto <paugusto@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 08:58:52 by paugusto          #+#    #+#             */
-/*   Updated: 2021/10/05 09:30:41 by paugusto         ###   ########.fr       */
+/*   Updated: 2021/10/06 15:10:25 by paugusto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	animation(t_game *game)
 {
-	if (game->loop < 2500)
+	if (game->loop < 750)
 	{
 		game->loop++;
 		return (0);
